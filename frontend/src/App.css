@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+@import "leaflet/dist/leaflet.css";
+
+/* Réserve de l'espace pour la navbar */
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.leaflet-container {
+  width: 100%;
+  height: 500px; /* Ajuste selon tes besoins */
+}
+/* Conteneur principal de la carte */
+.map-container {
+  flex: 1; /* Prend tout l'espace restant */
+  position: relative;
+  z-index: 700;
+}
+/* Ajuster la carte pour ne pas cacher la navbar */
+.map {
+  width: 100%;
+  height: 100%;
+}
+.fullscreen-map {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.Accueil,
+.PostesSources,
+.Départs,
+.Disjoncteurs,
+.Alertes {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Notification pour alerte */
+.notification {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+}
+
+.Statistiques {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  align-items: center;
+  padding: 20px;
+}
+
+.Statistiques h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.stat-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+}
+
+.stat-card {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.stat-card h2 {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.stat-card p {
+  font-size: 1.2rem;
+  color: lightgray;
+}
+
+
+/* Navbar CSS */
+.navbar {
+  background-color: #ffffff;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  color: #000;
+  z-index: 1000;
+}
+
+.nav-menu {
+  background-color: #ffffff;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  z-index: 1000;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 450ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #151414;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #ffffff;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
+
+
